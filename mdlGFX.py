@@ -1,9 +1,10 @@
 
 from gfxhat import touch, lcd, backlight, fonts
-from PIL import Image, ImageFont, ImageDraw
+import  mdlPil
 
 
 def gfxDisplay(image):
+    image = mdlPil.rotateImage(image, 180)
     for x in range(128):
         for y in range(64):
             pixel = image.getpixel((x, y))
