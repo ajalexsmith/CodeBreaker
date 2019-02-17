@@ -15,3 +15,11 @@ def GFXbacklight(r, g, b):
     for x in range(6):
         backlight.set_pixel(x, r, g, b)
     backlight.show()
+
+def off():
+    for x in range(6):
+        backlight.set_pixel(x, 0, 0, 0)
+        touch.set_led(x, 0)
+    backlight.show()
+    lcd.clear()
+    lcd.show()

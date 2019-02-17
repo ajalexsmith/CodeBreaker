@@ -12,9 +12,12 @@
 
 '''
 
-import mdlPreFlight
-import mdlGFX
+import mdlPreFlight, mdlGFX, clsMenu, clsSettings
 
-mdlPreFlight.PreFlight()
-mdlGFX.GFXbacklight(255,255,255)
+_ = clsSettings.globSettings
+mdlGFX.GFXbacklight(int(_.blR),int(_.blG), int(_.blB))
 
+try:
+    clsMenu.Menu()
+except KeyboardInterrupt:
+    mdlGFX.off()

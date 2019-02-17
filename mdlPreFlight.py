@@ -8,6 +8,8 @@ def PreFlight():
     image = TBCheck(image)
     mdlGFX.gfxDisplay(image)
 
+    return image
+
 
 
 def ControllerCheck(image):
